@@ -15,10 +15,11 @@ with app.app_context():
 
 app.register_blueprint(inventory_bp, url_prefix='/inventory')
 app.register_blueprint(auth_bp, url_prefix='/auth')
-
+#App setting
 @app.route('/')
 def index():
     return 'Welcome to the Automated Inventory Management System!'
 #Main app
+
 if __name__ == '__main__':
     app.run(debug=True)
